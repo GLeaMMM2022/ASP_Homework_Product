@@ -8,10 +8,10 @@ namespace ASP_Homework_Product
     {
         public static List<Product> products = new List<Product>()
         {
-            new Product("Last of us", 1000,"Sony's exclusive"),
-            new Product("Red Dead Redemption 2", 2000, "Rockstar games"),
-            new Product("Detroit",500,"Quantic Dream"),
-            new Product("Horizon FW",5000,"Sony")
+            new Product("Last of us", 1000,"Sony's exclusive","/images/lastofusimg.jpg"),
+            new Product("Red Dead Redemption 2", 2000, "Rockstar games", "/images/rdr2image.jpg"),
+            new Product("Detroit",500,"Quantic Dream", "/images/detroitimg.jpg"),
+            new Product("Horizon FW",5000,"Sony", "/images/horizonfbimage.jpg")
         };
 
         public List<Product> GetAllProducts()

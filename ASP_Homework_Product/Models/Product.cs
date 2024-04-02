@@ -9,8 +9,9 @@ namespace ASP_Homework_Product.Models
         public string Name { get; }
         public decimal Cost { get; }
         public string Description { get; }
+        public string ImagePath { get; }
 
-        public Product(string name, decimal cost, string description)
+        public Product(string name, decimal cost, string description, string imagePath)
         {
             Id = instanceCounter;
             Name = name;
@@ -18,6 +19,7 @@ namespace ASP_Homework_Product.Models
             Description = description;
 
             instanceCounter++;
+            ImagePath = imagePath;
         }
 
         public override string ToString()

@@ -1,13 +1,30 @@
 ﻿@model Product
 
-@{
+<!-- {
     ViewData["Title"] = $"{Model.Name}";
 }
+-->
 
-<div class="card-body">
-    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRW4k-PAWSOwgrXhlXPSFMs41I2tpSsvBrPiEKS5Z9Lw&s" alt="Alternate Text" />
+
+<div class="row">
+    <div class="col-6">
+        <img class="card-img-top" src=@Model.ImagePath alt="Изображение товара"/>
+    </div>
+
+    <div class="col-6">
+        <h5>@Model.Name</h5>
+        <h5>@Model.Cost</h5>
+        <h5>@Model.Description</h5>
+        <a class="btn btn-dark" href="/home/index" role="button">Продолжить покупки</a>
+        <a class="btn btn-dark" href="#" role="button">Добавить в корзину</a>
+    </div>
+</div>
+
+
+<!--<div class="card-body">
+    <img class="card-img-top" src=Product.ImagePath alt="Alternate Text" />
     <h5>@Model.Cost</h5>
     <h4>@Model.Description</h4>
-    <a class="btn btn-dark" href="/home/index" role="button">Продолжить покупки</a>
-    <a class="btn btn-dark" href="#" role="button">Добавить в корзину</a>
+    
 </div>
+-->

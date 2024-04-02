@@ -8,7 +8,8 @@
     @foreach (var product in Model)
     {
         <div class="col-3 card shadow">
-            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRW4k-PAWSOwgrXhlXPSFMs41I2tpSsvBrPiEKS5Z9Lw&s" alt="Alternate Text" />
+            <img class="card-img-top" src=@product.ImagePath alt="Alternate Text" />
+            
             <div class="card-body">
                 <a style="color:black" href="/product/index/"@product.Id"" >
                     <h5>@product.Name</h5>
