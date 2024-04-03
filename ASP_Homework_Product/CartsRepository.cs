@@ -41,7 +41,7 @@ namespace ASP_Homework_Product
             else
             {
                 var existingCartItem = existingCart.Items.FirstOrDefault(x => x.Product.Id == product.Id);
-                if (existingCart != null) 
+                if (existingCartItem != null) 
                 {
                     existingCartItem.Amount += 1;
                 }
