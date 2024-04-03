@@ -14,7 +14,7 @@ namespace ASP_Homework_Product.Models
         {
             get
             {
-                return Product.Cost*Amount;
+                return Product.Cost * Amount;
             }
         }
     }
