@@ -2,11 +2,11 @@
 
 namespace ASP_Homework_Product.Controllers
 {
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         private readonly ProductRepository productRepository;
 
-        public ProductController() 
+        public ProductsController() 
         {
             productRepository = new ProductRepository();
         }
