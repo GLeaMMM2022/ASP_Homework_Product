@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ASP_Homework_Product
 {
-    public class RandomCounter
+    public class RandomCounter : ICounter
     {
         static Random rnd = new Random();
 
@@ -13,7 +13,7 @@ namespace ASP_Homework_Product
 
         public RandomCounter()
         {
-            _value = rnd.Next(0, 100); 
+            _value = rnd.Next(0, 100);
         }
 
         public int Value

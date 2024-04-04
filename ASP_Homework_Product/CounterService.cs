@@ -7,9 +7,9 @@ namespace ASP_Homework_Product
 {
     public class CounterService
     {
-        public RandomCounter Counter { get; }
+        public ICounter Counter { get; }
         
-        public CounterService(RandomCounter counter)
+        public CounterService(ICounter counter)
         {
             Counter = counter;
         }

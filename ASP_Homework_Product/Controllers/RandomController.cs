@@ -4,10 +4,10 @@ namespace ASP_Homework_Product.Controllers
 {
     public class RandomController : Controller
     {
-        private readonly RandomCounter randomCounter;
+        private readonly ICounter randomCounter;
         private readonly CounterService counterService;
 
-        public RandomController(RandomCounter randomCounter,CounterService counterService)
+        public RandomController(ICounter randomCounter,CounterService counterService)
         {
             this.randomCounter = randomCounter;
             this.counterService = counterService;
@@ -15,7 +15,7 @@ namespace ASP_Homework_Product.Controllers
 
         public string Index()
         {
-            return randomCounter.Value.ToString();
+            return $"randomCounter = {randomCounter.Value}, countreService = {counterService.Counter.Value}";
             //return View();
         }
     }
