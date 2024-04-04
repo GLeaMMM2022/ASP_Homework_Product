@@ -5,16 +5,16 @@ using System.Linq;
 
 namespace ASP_Homework_Product
 {
-    public  class CartsRepository
+    public class CartsInMemoryRepository : ICartsRepository
     {
-        private  List<Cart> carts = new List<Cart>();
+        private List<Cart> carts = new List<Cart>();
 
-        public  Cart TryGetByUserId(string userId)
+        public Cart TryGetByUserId(string userId)
         {
             return carts.FirstOrDefault(x => x.UserId == userId);
         }
 
-        public  void Add(Product product,string userId)
+        public void Add(Product product, string userId)
         {
             //проверили есть ли у пользователя корзина если нет то добавим товар в новую корзину
             var existingCart = TryGetByUserId(userId);
@@ -41,15 +41,15 @@ namespace ASP_Homework_Product
             else
             {
                 var existingCartItem = existingCart.Items.FirstOrDefault(x => x.Product.Id == product.Id);
-                if (existingCartItem != null) 
+                if (existingCartItem != null)
                 {
                     existingCartItem.Amount += 1;
                 }
-                else 
+                else
                 {
                     existingCart.Items.Add(new CartItem
                     {
-                        Id= Guid.NewGuid(),
+                        Id = Guid.NewGuid(),
                         Amount = 1,
                         Product = product
                     });

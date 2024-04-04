@@ -4,10 +4,10 @@ namespace ASP_Homework_Product.Controllers
 {
     public class CartController : Controller
     {
-        private readonly ProductRepository productRepository;
-        private readonly CartsRepository cartsRepository;
+        private readonly IProductsRepository productRepository;
+        private readonly ICartsRepository cartsRepository;
 
-        public CartController(ProductRepository productRepository, CartsRepository cartsRepository)
+        public CartController(IProductsRepository productRepository, ICartsRepository cartsRepository)
         {
             this.productRepository = productRepository;
             this.cartsRepository = cartsRepository;
