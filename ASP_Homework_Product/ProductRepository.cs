@@ -6,7 +6,7 @@ namespace ASP_Homework_Product
 {
     public class ProductRepository
     {
-        public static List<Product> products = new List<Product>()
+        public List<Product> products = new List<Product>()
         {
             new Product("Last of us", 1000,"Sony's exclusive","/images/lastofusimg.jpg"),
             new Product("Red Dead Redemption 2", 2000, "Rockstar games", "/images/rdr2image.jpg"),
